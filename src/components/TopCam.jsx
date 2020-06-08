@@ -53,7 +53,7 @@ function TopCam() {
     },
   };
   return (
-    <View style={{flex: 1, position: 'relative'}}>
+    <View testID={'data-test-topCam'} style={{flex: 1, position: 'relative'}}>
       <NodeCameraView
         ref={cameraRef}
         style={{

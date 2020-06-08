@@ -55,7 +55,9 @@ function BottomCam() {
   };
 
   return (
-    <View style={{flex: 1, position: 'relative'}}>
+    <View
+      testID={'data-test-bottomCam'}
+      style={{flex: 1, position: 'relative'}}>
       <NodeCameraView
         ref={cameraRef}
         style={{

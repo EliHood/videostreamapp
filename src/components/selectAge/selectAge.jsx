@@ -8,9 +8,12 @@ function SelectAge(props) {
   const selectorAge = useStoreHooks().selectorAge;
   const {set_age} = useStoreHooks();
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Select Age</Text>
+    <View testID={'test-data-age'} style={styles.container}>
+      <Text testID={'test-data-age-header'} style={styles.header}>
+        Select Age
+      </Text>
       <Slider
+        testID="test-slider"
         value={selectorAge}
         style={styles.slider}
         minimumValue={18}
@@ -21,6 +24,7 @@ function SelectAge(props) {
       />
       <Text style={styles.age}>{selectorAge}</Text>
       <Button
+        testID="test-data-age-button"
         title={'Continue'}
         style={styles.button}
         onPress={() => props.navigation.navigate('Stream')}
