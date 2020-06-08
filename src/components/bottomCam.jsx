@@ -5,15 +5,6 @@ import {PERMISSIONS, checkMultiple} from 'react-native-permissions';
 import {NodeCameraView} from 'react-native-nodemediaclient';
 import Video from 'react-native-video';
 function BottomCam() {
-  const [flash, setFlash] = useState('off');
-  const [zoom, setZoom] = useState(0);
-  const [autoFocus, setAutoFocus] = useState('on');
-  const [depth, setDepth] = useState(0);
-  const [type, setType] = useState('front');
-  const [permission, setPermission] = useState({
-    apple: 'undeterminded',
-    android: 'undertermined',
-  });
   const cameraRef = useRef(null);
 
   useEffect(() => {

@@ -48,7 +48,14 @@
   "jest": {
     "preset": "react-native",
     "transform": {
-      "^.+\\.jsx$": "babel-jest"
-    }
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|@?react-navigation)"
+    ],
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ]
   }
 }

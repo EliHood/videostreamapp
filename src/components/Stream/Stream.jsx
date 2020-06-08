@@ -5,7 +5,7 @@ import TopCam from '../TopCam';
 
 export default function Stream() {
   return (
-    <View style={styles.container}>
+    <View testID="data-test-stream" style={styles.container}>
       <View style={{backgroundColor: 'tomato', height: '50%'}}>
         <TopCam />
       </View>

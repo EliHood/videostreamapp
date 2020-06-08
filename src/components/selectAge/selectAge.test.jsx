@@ -7,6 +7,7 @@ import {
 import SelectAge from './selectAge';
 import {Provider} from 'react-redux';
 import {store} from '../../store/store';
+// import renderWithNavigation from '../../testUtils';
 describe('selectAge component', () => {
   test('should render selectAge component', () => {
     const {getByTestId} = render(
@@ -23,6 +24,9 @@ describe('selectAge component', () => {
       </Provider>,
     );
     expect(getByTestId('test-data-age-header')).toBeTruthy();
+    expect(getByTestId('test-data-age-header').props.children).toBe(
+      'Select Age',
+    );
   });
 
   test('should render slider', () => {
