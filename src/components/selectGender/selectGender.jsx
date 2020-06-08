@@ -7,23 +7,26 @@ function SelectGender(props) {
   console.log(props);
   const {gender} = props.user;
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Select Gender</Text>
+    <View testID={'test-data-gender'} style={styles.container}>
+      <Text testID={'test-data-gender-header'} style={styles.header}>
+        Select Gender
+      </Text>
       <View style={styles.checkboxContainer}>
         <RadioButton.Group
           onValueChange={val => set_gender(val)}
           value={gender}>
           <View>
             <Text>Male</Text>
-            <RadioButton value="Male" />
+            <RadioButton testID={'test-data-gender-radio1'} value="Male" />
           </View>
           <View>
             <Text>Female</Text>
-            <RadioButton value="Female" />
+            <RadioButton testID={'test-data-gender-radio2'} value="Female" />
           </View>
         </RadioButton.Group>
       </View>
       <Button
+        testID={'test-data-gender-button'}
         title={'Continue'}
         disabled={gender ? false : true}
         style={styles.button}
