@@ -10,7 +10,7 @@ describe('should test user actions', () => {
       data: payload,
     };
 
-    expect(actions.setGender(payload, {})).toEqual(exepectedAction);
+    expect(actions.setGender(payload)).toEqual(exepectedAction);
   });
   test('should test age action', () => {
     const payload = {
@@ -21,6 +21,6 @@ describe('should test user actions', () => {
       data: payload,
     };
 
-    expect(actions.setAge(payload, {})).toEqual(exepectedAction);
+    expect(actions.setAge(payload)).toEqual(exepectedAction);
   });
 });
