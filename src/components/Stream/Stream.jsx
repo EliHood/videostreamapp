@@ -9,9 +9,7 @@ export default function Stream() {
       <View style={{backgroundColor: 'tomato', height: '50%'}}>
         <TopCam />
       </View>
-      <View style={styles.bottomHalf}>
-        <BottomCam />
-      </View>
+      <View style={styles.bottomHalf}>{/* <BottomCam /> */}</View>
     </View>
   );
 }

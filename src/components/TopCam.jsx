@@ -4,6 +4,16 @@ import {RNCamera} from 'react-native-camera';
 import {PERMISSIONS, checkMultiple} from 'react-native-permissions';
 import {NodeCameraView} from 'react-native-nodemediaclient';
 import Video from 'react-native-video';
+// import {
+//   RTCPeerConnection,
+//   RTCIceCandidate,
+//   RTCSessionDescription,
+//   RTCView,
+//   MediaStream,
+//   MediaStreamTrack,
+//   mediaDevices,
+//   registerGlobals,
+// } from 'react-native-webrtc';
 function TopCam() {
   const cameraRef = useRef(null);
 
@@ -45,7 +55,7 @@ function TopCam() {
   };
   return (
     <View testID={'data-test-topCam'} style={{flex: 1, position: 'relative'}}>
-      <NodeCameraView
+      {/* <NodeCameraView
         ref={cameraRef}
         style={{
           bottom: 0,
@@ -60,7 +70,7 @@ function TopCam() {
         scaleMode={'ScaleToFill'}
         video={settings.video}
         autopreview
-      />
+      /> */}
       <View style={{}}>
         <TouchableOpacity onPress={takePicture} style={{}}>
           {/* <Text
