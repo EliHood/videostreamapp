@@ -1,4 +1,5 @@
 import produce from 'immer';
+import PropTypes from 'prop-types';
 const initialState = {
   gender: '',
   age: 18,

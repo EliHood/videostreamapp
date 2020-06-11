@@ -79,6 +79,8 @@ target 'videpoapp4' do
 
   pod 'react-native-slider', :path => '../node_modules/@react-native-community/slider'
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
   target 'videpoapp4Tests' do
     inherit! :complete
     # Pods for testing

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "785012977957",
+    "firebase_url": "https://rn-webrtc-40ec8.firebaseio.com",
+    "project_id": "rn-webrtc-40ec8",
+    "storage_bucket": "rn-webrtc-40ec8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785012977957:android:6d2b25718576c4a2136acc",
+        "android_client_info": {
+          "package_name": "com.videpoapp4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785012977957-1e7t56pkshcgqmv2pqf9ipmia2gtcg72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLlwnyRu0p95c18ZvqmWCkFMLEqzoaa80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785012977957-1e7t56pkshcgqmv2pqf9ipmia2gtcg72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,9 +2,9 @@ import React from 'react';
 import {RadioButton} from 'react-native-paper';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import useStoreHooks from '../../store/storeHooks';
+import OurButton from '../../common/button';
 function SelectGender(props) {
   const {set_gender} = useStoreHooks();
-  console.log(props);
   const {gender} = props.user;
   return (
     <View testID={'test-data-gender'} style={styles.container}>
@@ -25,13 +25,17 @@ function SelectGender(props) {
           </View>
         </RadioButton.Group>
       </View>
-      <Button
+      <OurButton
         testID={'test-data-gender-button'}
         title={'Continue'}
-        disabled={gender ? false : true}
-        style={styles.button}
-        onPress={() => props.navigation.navigate('SelectAge')}
-      />
+        disabled={gender !== '' ? false : true}
+        onPress={() =>
+          props.navigation.navigate('SelectAge', {
+            user: props.user,
+          })
+        }>
+        Continue
+      </OurButton>
     </View>
   );
 }

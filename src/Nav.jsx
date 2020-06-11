@@ -3,6 +3,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import Splash from './store/container/Splash';
 import Stream from './components/Stream/Stream';
 import SelectAge from './components/selectAge/selectAge';
+import StartStream from './components/StartStream';
 
 export default createAppContainer(
   createStackNavigator(
@@ -12,6 +13,7 @@ export default createAppContainer(
       SelectAge: {
         screen: SelectAge,
       },
+      StartStream: StartStream,
       Stream: Stream,
     },
     {

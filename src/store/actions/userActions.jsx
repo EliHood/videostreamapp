@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export const setGender = data => ({
   type: 'SET_GENDER',
   data,

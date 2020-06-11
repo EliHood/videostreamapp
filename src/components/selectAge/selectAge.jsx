@@ -1,10 +1,10 @@
 import React from 'react';
-
+import database from '@react-native-firebase/database';
 import Slider from 'react-native-slider';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import useStoreHooks from '../../store/storeHooks';
+import OurButton from '../../common/button';
 function SelectAge(props) {
-  console.log(props);
   const selectorAge = useStoreHooks().selectorAge;
   const {set_age} = useStoreHooks();
   return (
@@ -23,12 +23,12 @@ function SelectAge(props) {
         onValueChange={val => set_age(Math.round(val))}
       />
       <Text style={styles.age}>{selectorAge}</Text>
-      <Button
+      <OurButton
         testID="test-data-age-button"
         title={'Continue'}
-        style={styles.button}
-        onPress={() => props.navigation.navigate('Stream')}
-      />
+        onPress={() => props.navigation.navigate('StartStream')}>
+        Continue
+      </OurButton>
     </View>
   );
 }
