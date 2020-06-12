@@ -14,6 +14,7 @@ const userReducer = (state = initialState, action) =>
         draft.gender = action.data;
         return;
       case 'SET_AGE':
+        console.log(action);
         draft.age = action.data;
         return;
     }

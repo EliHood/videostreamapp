@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text, Button} from 'react-native';
 import OurButton from '../common/button';
 export default function StartStream(props) {
+  console.log(props);
   return (
     <View style={styles.container}>
       <Text style={styles.startStream}>Ready To Stream ?</Text>
