@@ -6,7 +6,15 @@ import useStoreHooks from '../../store/storeHooks';
 import OurButton from '../../common/button';
 function SelectAge(props) {
   const selectorAge = useStoreHooks().selectorAge;
-  const {set_age} = useStoreHooks();
+  const selectorGender = useStoreHooks().selectorGender;
+  const {set_age, set_room} = useStoreHooks();
+  const persistUserData = () => {
+    const data = {
+      age: selectorAge,
+      gender: selectorGender,
+    };
+    set_room(data, props);
+  };
   return (
     <View testID={'test-data-age'} style={styles.container}>
       <Text testID={'test-data-age-header'} style={styles.header}>
@@ -26,7 +34,7 @@ function SelectAge(props) {
       <OurButton
         testID="test-data-age-button"
         title={'Continue'}
-        onPress={() => props.navigation.navigate('StartStream')}>
+        onPress={persistUserData}>
         Continue
       </OurButton>
     </View>

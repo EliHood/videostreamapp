@@ -2,15 +2,30 @@ import React, {useRef} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {RTCView} from 'react-native-webrtc';
 import useStoreHooks from '../store/storeHooks';
-
+import AsyncStorage from '@react-native-community/async-storage';
 function TopCam(props) {
+  const [currentUser, setCurrentUser] = React.useState({});
   console.log(props);
-  const selectorAge = useStoreHooks().selectorAge;
-  const selectorGender = useStoreHooks().selectorGender;
+  const getUserData = async () => {
+    try {
+      const data = await AsyncStorage.getItem('userSession');
+      const jsonData = JSON.parse(data);
+      console.log(jsonData);
+      setCurrentUser(jsonData);
+      return jsonData;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  React.useEffect(() => {
+    getUserData();
+  }, []);
+  console.log(currentUser);
   return (
     <View testID={'data-test-topCam'} style={styles.camView}>
-      <Text style={styles.topText}>Age: {selectorAge}</Text>
-      <Text style={styles.bottomText}>Gender: {selectorGender}</Text>
+      <Text style={styles.topText}>Age: {currentUser.age}</Text>
+      <Text style={styles.bottomText}>Gender: {currentUser.gender}</Text>
       <RTCView
         objectFit={'cover'}
         style={styles.rtcview}
