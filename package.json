@@ -19,7 +19,7 @@
     "@react-native-firebase/database": "^7.2.2",
     "express": "^4.17.1",
     "firebase": "^7.15.0",
-    "immer": "^6.0.9",
+    "immer": "^9.0.6",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-camera": "^3.28.0",
